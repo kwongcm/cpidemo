@@ -1,0 +1,33 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "sb_rest2mqtest_api",
+    "version" : "1.0.0",
+    "description" : "sb_rest2mqtest_api"
+  },
+  "paths" : {
+    "/createcustomer" : {
+      "post" : {
+        "operationId" : "insert",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful."
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "create customer record",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "string"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/rest2mq/v1"
+}
